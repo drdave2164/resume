@@ -450,7 +450,8 @@ router.get('/program', function (req, res) {
         ],
       },
     },
-  },
+  })
+})
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
