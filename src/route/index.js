@@ -366,7 +366,6 @@ router.get('/person', function (req, res) {
 
 // ================================================================
 
-<<<<<<< program
 // ================================================================
 
 router.get('/program', function (req, res) {
@@ -450,7 +449,8 @@ router.get('/program', function (req, res) {
           },
         ],
       },
-=======
+    },
+  },
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -544,7 +544,6 @@ router.get('/bio', function (req, res) {
         'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
       year: 'Late 15th to early 16th century',
       field: 'Invention',
->>>>>>> master
     },
   })
 })
