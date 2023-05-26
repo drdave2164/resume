@@ -1,0 +1,176 @@
+<main>
+    <div class="display-4 text-center">
+        {{name}}
+    </div>
+    <br>
+    <div class="display-6">
+        {{description}}
+    </div>
+    <br>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+        aria-expanded="false" aria-controls="collapseWidthExample">
+        Price
+    </button>
+    <div style="min-height: 60px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width:100px;">
+                {{price}}$
+            </div>
+        </div>
+    </div>
+    <div class="display-6">
+        Category: {{category}}
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="display-6 text-center">
+        Features:
+    </div>
+    {{#with features}}
+    <div>
+        <br>
+        <ul>
+            {{#with processor}}
+            <li>
+                <b>Processor: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{brand}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{model}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{speed}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{cores}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{cache}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            {{#with memory}}
+            <li>
+                <b>Memory: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{type}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{size}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{speed}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            {{#with storage}}
+            <li>
+                <b>Storage: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{type}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{size}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            {{#with display}}
+            <li>
+                <b>Display: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{size}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{resolution}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{technology}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{color_space}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{brightness}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{refresh_rate}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            {{#with graphics}}
+            <li>
+                <b>Graphics: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{brand}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{model}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{memory}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            <li>
+                <b>Ports</b>
+                <ul>
+                    {{#each ports}}
+                    <li>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">{{type}}</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{count}}</li>
+                                <ul>
+                                    {{#each features}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </ol>
+                        </nav>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{#with battery}}
+            <li>
+                <b>Battery: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{type}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{capacity}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{life}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            <li>
+                <b>Weight: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{weight}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{#with dimensions}}
+            <li>
+                <b>Dimensions: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">height: {{height}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">width: {{width}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">depth: {{depth}}</li>
+                    </ol>
+                </nav>
+            </li>
+            {{/with}}
+            <li>
+                <b>Operating system: </b>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">{{operating_system}}</li>
+                    </ol>
+                </nav>
+            </li>
+            <li>
+                <b>Accessories</b>
+                <ul>
+                    {{#each accessories}}
+                    <li>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">{{name}}$</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{price}}$</li>
+                            </ol>
+                        </nav>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    {{/with}}
+</main>
