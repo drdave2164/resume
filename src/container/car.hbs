@@ -1,0 +1,247 @@
+<div class="p-5">
+    <div class="card mb-3">
+        <img src="https://gaadiwaadi.com/wp-content/uploads/2021/11/2022-Toyota-Camry.jpg" class="card-img-top"
+            alt="Toyoyta Camry">
+        <div class="card-body">
+            <h5 class="card-title">{{make}} {{model}}</h5>
+            <p class="card-text">year: {{year}}</p>
+            <p class="card-text"><small class="text-body-secondary">color: {{color}}</small></p>
+        </div>
+    </div>
+    {{#with features}}
+    <div class="card-group">
+        {{#with interior}}
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/10/23/a1/1023a1fe6f299c9e4bb9f0d336b5a2a7--camry---toyota-camry.jpg"
+                class="card-img-top" alt="interior">
+            <div class="card-body">
+                <h5 class="card-title">Interior</h5>
+                <div>
+                    <b class="card-text">Seats</b>
+                    {{#with seats}}
+                    <p class="card-text">Material: {{material}}</p>
+                    <p class="card-text">Color: {{color}}</p>
+                    {{#if heated}}
+                    <p class="card-text"><small class="text-body-secondary">Heated: yes</small></p>
+                    {{/if}}
+                    {{#if ventilated}}
+                    <p class="card-text"><small class="text-body-secondary">Ventilated: yes</small></p>
+                    {{/if}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.carbuzz.com/gallery-images/2023-toyota-camry-dashboard-carbuzz-854621-1600.jpg"
+                class="card-img-top" alt="dashboard">
+            <div class="card-body">
+                <h5 class="card-title">Interior</h5>
+                <div>
+                    <b class="card-text">Dashboard</b>
+                    {{#with dashboard}}
+                    <p class="card-text">Material: {{material}}</p>
+                    <p class="card-text">Color: {{color}}</p>
+                    <p class="card-text">Display:</p>
+                    <ul>
+                        {{#with display}}
+                        <li>
+                            <p class="card-text"><small class="text-body-secondary">Type: {{type}}</small></p>
+                        </li>
+                        <li>
+                            <p class="card-text"><small class="text-body-secondary">Size: {{size}}</small></p>
+                        </li>
+                        <li>
+                            <p class="card-text"><small class="text-body-secondary">Resolution: {{resolution}}</small>
+                            </p>
+                        </li>
+                        {{#if touchscreen}}
+                        <li>
+                            <p class="card-text"><small class="text-body-secondary">Touchscreen: yes</small></p>
+                        </li>
+                        {{/if}}
+                        {{/with}}
+                    </ul>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2021/11/1-2022_Toyota_Tundra_Limited_TRD_SupersonicRed_021.jpg"
+                class="card-img-top" alt="audio">
+            <div class="card-body">
+                <h5 class="card-title">Interior</h5>
+                <div>
+                    <b class="card-text">Audio</b>
+                    {{#with audio}}
+                    <p class="card-text">System: {{system}}</p>
+                    <p class="card-text">Speakers: {{speakers}}</p>
+                    {{#if subwoofer}}
+                    <p class="card-text"><small class="text-body-secondary">Subwoofer: yes</small></p>
+                    {{/if}}
+                    {{#if bluetooth}}
+                    <p class="card-text"><small class="text-body-secondary">Bluetooth: yes</small></p>
+                    {{/if}}
+                    {{#if USB}}
+                    <p class="card-text"><small class="text-body-secondary">USB: yes</small></p>
+                    {{/if}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    <br>
+    <div class="card-group">
+        {{#with exterior}}
+        <div class="card">
+            <img src="https://cdn.carbuzz.com/gallery-images/2022-toyota-camry-rim-carbuzz-854646-1600.jpg"
+                class=" card-img-top" alt="exterior">
+            <div class="card-body">
+                <h5 class="card-title">Exterior</h5>
+                <div>
+                    <b class="card-text">Wheels</b>
+                    {{#with wheels}}
+                    <p class="card-text">Size: {{size}}</p>
+                    <p class="card-text">Type: {{type}}</p>
+                    <p class="card-text">Color: {{color}}</p>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.carbuzz.com/gallery-images/2022-toyota-camry-headlamps-carbuzz-854622-1600.jpg"
+                class=" card-img-top" alt="exterior">
+            <div class="card-body">
+                <h5 class="card-title">Exterior</h5>
+                <div>
+                    <b class="card-text">Headlights</b>
+                    {{#with headlights}}
+                    <p class="card-text">Type: {{type}}</p>
+                    <p class="card-text">Brightness: {{brightness}}</p>
+                    {{#if automatic}}
+                    <p class="card-text"><small class="text-body-secondary">Automatic: yes</small></p>
+                    {{/if}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.autopediame.com/storage/images/Toyota/Camry/_i6i1458.jpg" class=" card-img-top"
+                alt="exterior">
+            <div class="card-body">
+                <h5 class="card-title">Exterior</h5>
+                <div>
+                    <b class="card-text">Sunroof</b>
+                    {{#with sunroof}}
+                    <p class="card-text">Type: {{type}}</p>
+                    <p class="card-text">Size: {{size}}</p>
+                    {{#if automatic}}
+                    <p class="card-text"><small class="text-body-secondary">Automatic: yes</small></p>
+                    {{/if}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    <br>
+    <div class="card-group">
+        {{#with safety}}
+        <div class="card">
+            <img src="https://images.hindustantimes.com/auto/img/2022/01/12/original/Camry_airbags_1641974622022.JPG"
+                class=" card-img-top" alt="Safety">
+            <div class="card-body">
+                <h5 class="card-title">Safety</h5>
+                <div>
+                    <b class="card-text">Airbags</b>
+                    {{#with airbags}}
+                    <p class="card-text">Front: {{front}}</p>
+                    <p class="card-text">Side: {{side}}</p>
+                    <p class="card-text">Knee: {{knee}}</p>
+                    <p class="card-text">Rear: {{rear}}</p>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://ireland.apollo.olxcdn.com/v1/files/bburpj2c3zt01-UA/image;s=960x720" class=" card-img-top"
+                alt="Safety">
+            <div class="card-body">
+                <h5 class="card-title">Safety</h5>
+                <div>
+                    <b class="card-text">Assistance</b>
+                    {{#with assistance}}
+                    {{#if blind_spot_monitoring}}
+                    <p class="card-text"><small class="text-body-secondary">Blind Spot Monitoring: yes</small></p>
+                    {{/if}}
+                    {{#if rear_cross_traffic_alert}}
+                    <p class="card-text"><small class="text-body-secondary">Rear Cross Traffic_alert: yes</small></p>
+                    {{/if}}
+                    {{#if lane_departure_warning}}
+                    <p class="card-text"><small class="text-body-secondary">Lane Departure Warning: yes</small></p>
+                    {{/if}}
+                    {{#if adaptive_cruise_control}}
+                    <p class="card-text"><small class="text-body-secondary">Adaptive Cruise Control: yes</small></p>
+                    {{/if}}
+                    {{#if collision_warning}}
+                    <p class="card-text"><small class="text-body-secondary">Collision Warning: yes</small></p>
+                    {{/if}}
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    <br>
+    {{#with engine}}
+    <div class="card mb-3">
+        <img src="https://ymimg1.b8cdn.com/resized/car_version/25320/pictures/8571926/listing_main_14754_st1280_050.jpg"
+            class="card-img-top" alt="engine">
+        <div class="card-body">
+            <h5 class="card-title">Engine</h5>
+            <p class="card-text">Type: {{type}}</p>
+            <p class="card-text">Displacement: {{displacement}}</p>
+            <p class="card-text">Torque: {{torque}}</p>
+            <p class="card-text">Transmission:</p>
+            <ul>
+                {{#with transmission}}
+                <li>Type: {{type}}</li>
+                <li>Gears: {{gears}}</li>
+                {{/with}}
+            </ul>
+        </div>
+    </div>
+    {{/with}}
+    <br>
+    <div class="card text-bg-light mb-3" style="max-width: 70rem;">
+        <div class="card-header"><b>Fuel economy</b></div>
+        <div class="card-body">
+            {{#with fuel_economy}}
+            <p class="card-text">City: {{city}}</p>
+            <p class="card-text">Highway: {{highway}}</p>
+            <p class="card-text">Combined: {{combined}}</p>
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <div class="card text-bg-light mb-3" style="max-width: 70rem;">
+        <div class="card-header"><b>Price</b></div>
+        <div class="card-body">
+            {{#with price}}
+            <p class="card-text">Base: {{base}}</p>
+            <p class="card-text">Destination: {{destination}}</p>
+            <p class="card-text">Options: </p>
+            <ul>
+                {{#with options}}
+                <li>Navigation: {{navigation}}</li>
+                <li>Moonroof: {{moonroof}}</li>
+                <li>Premium paint: {{premium_paint}}</li>
+                {{/with}}
+            </ul>
+            <p class="card-text">
+            <h3>Total:</h3> <b>{{total}}</b></p>
+            {{/with}}
+        </div>
+    </div>
+</div>
