@@ -1,0 +1,56 @@
+<main>
+    <div class="display-3 text-center">
+        {{name}}
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <div class="display-4">Users:</div>
+        {{#each users}}
+        {{> facebook}}
+        <div class="display-5">Friends:</div>
+        <ul>
+            {{#each friends}}
+            <li>{{> facebook}} </li>
+            <div class="display-6">Mutual friends:</div>
+            <ul>
+                {{#each mutual_friends}}
+                <li>{{> facebook}} </li>
+                <ul>
+                    {{#each mutual_friends}}
+                    <li>{{> facebook}} </li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </ul>
+        <ul>
+            {{#each groups}}
+            <li>{{> facebook gender=description}}</li>
+            <div class="display-6">Members:</div>
+            <ul>
+                {{#each members}}
+                <li>{{> facebook}}</li>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </ul>
+        <div class="display-5">Groups:</div>
+        <ul>
+            {{#each friends}}
+            {{#each groups}}
+            <li>{{> facebook gender=description}}</li>
+            <div class="display-6">Members:</div>
+            <ul>
+                {{#each members}}
+                <li>{{> facebook}}</li>
+                {{/each}}
+            </ul>
+            {{/each}}
+            {{/each}}
+        </ul>
+        {{/each}}
+    </div>
+</main>
