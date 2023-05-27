@@ -17,29 +17,35 @@
             <ul>
                 {{#each mutual_friends}}
                 <li>{{> facebook}} </li>
+                {{#if mutual_friends}}
+                <div class="display-6">Mutual friends:</div>
                 <ul>
                     {{#each mutual_friends}}
                     <li>{{> facebook}} </li>
                     {{/each}}
                 </ul>
+                {{/if}}
                 {{/each}}
             </ul>
-            {{/each}}
-        </ul>
-        <ul>
-            {{#each groups}}
-            <li>{{> facebook gender=description}}</li>
-            <div class="display-6">Members:</div>
+            {{#if groups}}
+            <div class="display-5">Groups:</div>
             <ul>
-                {{#each members}}
-                <li>{{> facebook}}</li>
+                {{#each groups}}
+                <li>{{> facebook gender=description}}</li>
+                <div class="display-6">Members:</div>
+                <ul>
+                    {{#each members}}
+                    <li>{{> facebook}}</li>
+                    {{/each}}
+                </ul>
                 {{/each}}
             </ul>
+            {{/if}}
             {{/each}}
         </ul>
+        {{#if groups}}
         <div class="display-5">Groups:</div>
         <ul>
-            {{#each friends}}
             {{#each groups}}
             <li>{{> facebook gender=description}}</li>
             <div class="display-6">Members:</div>
@@ -49,8 +55,9 @@
                 {{/each}}
             </ul>
             {{/each}}
-            {{/each}}
         </ul>
+        {{/if}}
+
         {{/each}}
     </div>
 </main>
