@@ -1,0 +1,126 @@
+<main>
+    <hr class="mb-4">
+    <div class="nav pb-5">
+        {{#with navigation}}
+        {{#each links}}
+        <div class="nav-item">
+            <a href="{{href}}" class="nav-link">{{text}}</a>
+        </div>
+        {{/each}}
+        {{/with}}
+    </div>
+
+    <div class="row">
+        {{#with newsBlock}}
+        <div class="display-3 text-center pb-4">{{title}}</div>
+        {{#each cards}}
+        <div class="col-3 p-2">
+            <div class="card text-bg-dark">
+                <div class="card-header">
+                    <div>{{title}}
+                        {{#if isNew}}
+                        <span class="badge text-bg-danger rounded-pill text-uppercase">New</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge text-bg-success rounded-pill text-uppercase">Top</span>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/with}}
+    </div>
+    <hr class="mt-5 mb-5">
+
+    <div class="row">
+        {{#with goodsBlock}}
+        <div class="nav nav-tabs">
+            {{#each tabs}}
+            <div class="nav-item">
+                {{#if isActive}}
+                <a href="#" class="nav-link active">{{text}}</a>
+                {{/if}}
+                {{#if isDisabled}}
+                <a href="#" class="nav-link disabled">{{text}}</a>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{#each cards}}
+        <div class="col-4 p-2">
+            <div class="card">
+                <img class="card-img-top" src="{{image}}" alt="{{title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}
+                        {{#if isHot}}
+                        <span class="badge text-bg-warning rounded-pill text-uppercase">Hot!</span>
+                        {{/if}}
+                        {{#if isNew}}
+                        <span class="badge text-bg-primary rounded-pill text-uppercase">New</span>
+                        {{/if}}
+                    </h5>
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/with}}
+    </div>
+    <hr class="mt-5 mb-5">
+    <div class="row">
+        {{#with subscribe}}
+        <div class="col-12">
+            <div class="card text-bg-dark">
+                <div class="card-body ">
+                    <h4 class="card-title mb-4">{{header}}</h4>
+                    <p>{{description}}</p>
+                    <div class="nav flex-column">
+                        {{#each buttons}}
+                        <a href="{{link}}"><button class="btn btn-primary my-1">{{text}}</button></a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    <hr class="mt-5 mb-5">
+    <div class="row">
+        {{#with service}}
+        <div class="col-12">
+            <div class="card text-bg-success">
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">{{title}}</h4>
+                    <p>{{description}}</p>
+                    {{#each buttons}}
+                    <a href="{{link}}"><button class="btn btn-primary">{{text}}</button></a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    <hr class="mt-5 mb-5">
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2">
+            <div class="nav-item">
+                {{#each this}}
+                <div>
+                    {{#if @last}}
+                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                    {{else}}
+                    <a href="{{link}}" class="nav-link">{{text}}</a>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</main>
