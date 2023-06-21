@@ -3338,6 +3338,12 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'test',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router
