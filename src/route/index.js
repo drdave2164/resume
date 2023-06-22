@@ -6,28 +6,28 @@ const router = express.Router()
 
 var header = {
   name: {
-    firstname: 'Ivan',
-    lastname: 'Ivanov',
+    firstname: 'Oleksandr',
+    lastname: 'Derevinskiy',
   },
 
   position: 'Junior Fullstack JS Developer',
   salary: '600$ в місяць',
-  address: 'Ukraine, Kyiv, Khreschatik str, 1',
+  address: 'Ukraine, Kyiv, Sribnokilska str, 4',
 }
 
 var footer = {
   social: {
     email: {
-      text: 'ivanov@mail.com',
-      href: 'mailto:dmytro@mail.com',
+      text: 'drdave2164@gmail.com',
+      href: 'https://mail.google.com/',
     },
     phone: {
-      text: '+380670000123',
-      href: 'tel:+380670000123',
+      text: '+380639991159',
+      href: 'tel:+380639991159',
     },
     linkedin: {
       text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/dmytro-test',
+      href: 'https://www.linkedin.com/in/%D1%81%D0%B0%D1%88%D0%B0-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-8a49a526a/',
     },
   },
 }
@@ -41,8 +41,110 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: 'Resume project',
+    },
+    header: {
+      name: {
+        firstname: 'Олександр',
+        lastname: 'Деревінський',
+      },
+      project: {
+        title: 'Resume project',
+      },
+      address: 'Ukraine, Kyiv, Sribnokilska str, 4',
+    },
+    main: {
+      title: 'Список сторінок',
+      text: 'Це список сторінок проекту, над якими я працював у процесі вивчення курсу програмування в HTML та Bootstrap. З кожною новою сторінкою освоював нові техніки, теги та закріплював свої знання на практиці, поступово вдосконалюючи їх.',
+    },
+    buttons: [
+      {
+        link: 'http://localhost:3000/bio',
+        name: 'bio',
+      },
+      {
+        link: 'http://localhost:3000/car',
+        name: 'car',
+      },
+      {
+        link: 'http://localhost:3000/education',
+        name: 'education',
+      },
+      {
+        link: 'http://localhost:3000/facebook',
+        name: 'facebook',
+      },
+      {
+        link: 'http://localhost:3000/js',
+        name: 'js',
+      },
+      {
+        link: 'http://localhost:3000/mac',
+        name: 'mac',
+      },
+      {
+        link: 'http://localhost:3000/person',
+        name: 'person',
+      },
+      {
+        link: 'http://localhost:3000/program',
+        name: 'program',
+      },
+      {
+        link: 'http://localhost:3000/shopcart',
+        name: 'shopcart',
+      },
+      {
+        link: 'http://localhost:3000/shopcatalog',
+        name: 'shopcatalog',
+      },
+      {
+        link: 'http://localhost:3000/shophome',
+        name: 'shophome',
+      },
+      {
+        link: 'http://localhost:3000/shoporder',
+        name: 'shoporder',
+      },
+      {
+        link: 'http://localhost:3000/shopprofile',
+        name: 'shopprofile',
+      },
+      {
+        link: 'http://localhost:3000/shopview',
+        name: 'shopview',
+      },
+      {
+        link: 'http://localhost:3000/skills',
+        name: 'skills',
+      },
+      {
+        link: 'http://localhost:3000/summary',
+        name: 'summary',
+      },
+      {
+        link: 'http://localhost:3000/task21',
+        name: 'task21',
+      },
+      {
+        link: 'http://localhost:3000/task22',
+        name: 'task22',
+      },
+      {
+        link: 'http://localhost:3000/task31',
+        name: 'task31',
+      },
+      { link: 'http://localhost:3000/web', name: 'web' },
+      {
+        link: 'http://localhost:3000/work',
+        name: 'work',
+      },
+    ],
+    footer,
+  })
 })
 
 // ================================================================
