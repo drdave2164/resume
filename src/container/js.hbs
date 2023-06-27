@@ -1,8 +1,5 @@
 <div class="p-5">
-    <center>
-        <h1>{{name}}</h1>
-    </center>
-    <br>
+    <h1 class="text-center mb-4">{{name}}</h1>
     <p><b>{{description}}</b></p>
     <p>
         <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
@@ -19,118 +16,116 @@
             </div>
         </div>
     </div>
-    <div class="btn-group">
-        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Types
-        </button>
-        <ul class="dropdown-menu">
-            {{#each types}}
-            <li><a class="dropdown-item" href="#">{{this}}</a></li>
-            {{/each}}
-        </ul>
-    </div>
-    <div class="btn-group">
-        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            data-bs-auto-close="outside" aria-expanded="false">
-            Syntax
-        </button>
-        <ul class="dropdown-menu">
-            {{#with syntax}}
-            <li>
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Variables
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>{{variables}}</li>
-                    </ul>
-                </div>
-            </li>
-            <br>
-            <li>
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Functions
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>{{functions}}</li>
-                    </ul>
-                </div>
-            </li>
-            <br>
-            <li>
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Conditionals
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>{{conditionals}}</li>
-                    </ul>
-                </div>
-            </li>
-            <br>
-            <li>
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Loops
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>{{loops}}</li>
-                    </ul>
-                </div>
-            </li>
-            <br>
-            <li>
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Classes
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>{{classes}}</li>
-                    </ul>
-                </div>
-            </li>
-            {{/with}}
-        </ul>
-    </div>
-    <div class="btn-group">
-        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Features
-        </button>
-        <ul class="dropdown-menu">
-            {{#each features}}
-            <li><a class="dropdown-item" href="#">{{this}}</a></li>
-            {{/each}}
-        </ul>
-    </div>
-    <div class="btn-group">
-        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Libraries
-        </button>
-        <ul class="dropdown-menu">
-            {{#each libraries}}
-            <li><a class="dropdown-item" href="#">{{this}}</a></li>
-            {{/each}}
-        </ul>
-    </div>
-    <div class="btn-group">
-        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Tools
-        </button>
-        <ul class="dropdown-menu">
-            {{#each tools}}
-            <li><a class="dropdown-item" href="#">{{this}}</a></li>
-            {{/each}}
-        </ul>
+    <div class="mb-4">
+        <div class="btn-group">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Types
+            </button>
+            <ul class="dropdown-menu">
+                {{#each types}}
+                <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" aria-expanded="false">
+                Syntax
+            </button>
+            <ul class="dropdown-menu">
+                {{#with syntax}}
+                <li class="mb-3">
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Variables
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>{{variables}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-3">
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Functions
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>{{functions}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-3">
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Conditionals
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>{{conditionals}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-3">
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Loops
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>{{loops}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-3">
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Classes
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>{{classes}}</li>
+                        </ul>
+                    </div>
+                </li>
+                {{/with}}
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Features
+            </button>
+            <ul class="dropdown-menu">
+                {{#each features}}
+                <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Libraries
+            </button>
+            <ul class="dropdown-menu">
+                {{#each libraries}}
+                <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tools
+            </button>
+            <ul class="dropdown-menu">
+                {{#each tools}}
+                <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">

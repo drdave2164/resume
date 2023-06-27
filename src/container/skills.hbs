@@ -3,14 +3,14 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<main>
 	{{#with main}}
-	<main>
+	<div>
 		<section>
 			{{> title data="All skills" big=true}}
 			<ul>
 				{{#each skills}}
-				<li>
+				<li class="ms-3">
 					{{name}}
 					{{#if point includeZero=true}} ({{point}}) {{/if}}
 					{{#if isTop}} (top!) {{/if}}
@@ -28,16 +28,16 @@
 			{{> title data="My hobbies" big=false}}
 			<ol>
 				{{#each hobbies}}
-				<li>
+				<li class="ms-3">
 					{{name}}
 					{{#if isMain}} (favourite) {{/if}}
 				</li>
 				{{/each}}
 			</ol>
 		</section>
-	</main>
+	</div>
 	{{/with}}
-</div>
+</main>
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

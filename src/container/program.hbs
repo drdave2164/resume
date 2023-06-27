@@ -1,29 +1,21 @@
-<div>
+<main>
    <section>
       <div>
          {{#with program.excursion}}
          <div>
-            <center>
-               <h1>Excursion :</h1>
-            </center>
-            <hr>
-            <br>
-            <b>{{name}}</b>
+            <h1 class="text-center mb-5">Excursion :</h1>
+            <p class="fs-4 fw-semibold">{{name}}</p>
             {{#with location}}
             <address>{{city}}, {{country}}</address>
             {{/with}}
             <date>{{date}}</date>
          </div>
-         <br>
-         <hr>
-         <br>
+         <hr class="my-5">
          <div>
-            <center>
-               <h2>Program :</h2>
-            </center>
+            <h2 class="text-center mb-5">Program :</h2>
             {{#each program}}
             <div>
-               <b>{{name}}</b>
+               <p class="fs-4 fw-semibold">{{name}}</p>
                <p>{{type}} ({{duration}})</p>
             </div>
             <div>
@@ -37,16 +29,15 @@
                      {{/with}}
                   </div>
                   <div>
-                     <ul>
+                     <ul class="mb-3">
                         {{#each exhibits}}
-                        <li>
-                           <b>"{{name}}"</b> <b>{{artist}}</b>
-                           <p>{{description}}</p>
+                        <li class="ms-3 mb-2">
+                           <span class="fw-bolder">"{{name}}"{{artist}}</span>
+                           <span>{{description}}</span>
                            {{#if audio_guide}}
                            (audio guide)
                            {{/if}}
                         </li>
-                        <br>
                         {{/each}}
                      </ul>
                   </div>
@@ -63,10 +54,10 @@
                   {{/with}}
                </div>
                <div>
-                  <ul>
+                  <ul class="mb-3">
                      {{#each performers}}
-                     <li>
-                        <b>"{{name}}", {{type}}</b>
+                     <li class="ms-3 mb-2">
+                        <span class="fw-bolder">"{{name}}", {{type}}</span>
                      </li>
                      {{/each}}
                   </ul>
@@ -75,12 +66,15 @@
                   <h3>Guide :</h3>
                   {{#with guide}}
                   <b>{{name}}</b>
-                  <p>language :{{language}}</p>
-                  <b>rating :{{rating}}</b>
+                  <p>language: {{language}}</p>
+                  <b>rating: {{rating}}</b>
                   {{/with}}
                </div>
-               <br>
-               <hr>
+               {{#if @first}}
+               <div class="row">
+                  <hr class="col-8 my-5">
+               </div>
+               {{/if}}
                {{/with}}
             </div>
             {{/each}}
@@ -88,4 +82,4 @@
          {{/with}}
       </div>
    </section>
-</div>
+</main>
