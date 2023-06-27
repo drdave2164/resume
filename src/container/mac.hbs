@@ -1,12 +1,10 @@
 <main>
-    <div class="display-4 text-center">
+    <div class="display-4 text-center mb-3">
         {{name}}
     </div>
-    <br>
-    <div class="display-6">
+    <div class="display-6 mb-3">
         {{description}}
     </div>
-    <br>
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
         aria-expanded="false" aria-controls="collapseWidthExample">
         Price
@@ -21,15 +19,12 @@
     <div class="display-6">
         Category: {{category}}
     </div>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-4">
     <div class="display-6 text-center">
         Features:
     </div>
     {{#with features}}
     <div>
-        <br>
         <ul>
             {{#with processor}}
             <li>

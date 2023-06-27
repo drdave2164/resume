@@ -1,22 +1,23 @@
 <div>
     <section>
         <div>
-            <center>
-                <h1>{{name}}</h1>
-            </center>
-            <date><big>{{birthdate}}</big> ({{birthplace}})</date> -
-            <br>
-            <date><big>{{deathdate}}</big> ({{deathplace}})</date>.
+            <h1 class="text-center mb-3">{{name}}</h1>
+            <div class="mb-2">
+                <date class="fw-bolder">{{birthdate}}({{birthplace}}) -</date><br>
+                <date class="fw-bolder">{{deathdate}}({{deathplace}}).</date>
+            </div>
             <p>{{nationality}}</p>
             <b>{{occupation}}</b>
-            <ul>
-                {{#each known_for}}
-                <li>{{this}}</li>
-                {{/each}}
-            </ul>
+            <div>
+                <ul>
+                    {{#each known_for}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
     </section>
-    <hr>
+    <hr class="my-5">
     <section>
         <div>
             <h3>Education :</h3>
@@ -30,30 +31,29 @@
             <h3>Publications :</h3>
             <ul>
                 {{#each notable_publications}}
-                <li>"{{title}}",{{year}} ({{publisher}})</li>
+                <li class="ms-3">"{{title}}",{{year}} ({{publisher}})</li>
                 {{/each}}
             </ul>
         </div>
     </section>
-    <hr>
+    <hr class="my-5">
     <section>
         <div>
             <h3>Partners :</h3>
-
             <ul>
                 {{#each partners}}
-                <li><b>{{name}}</b> ({{years}}) - {{relationship}} </li>
+                <li class="ms-3"><b>{{name}}</b> ({{years}}) - {{relationship}} </li>
                 {{/each}}
             </ul>
         </div>
     </section>
-    <hr>
+    <hr class="my-5">
     <section>
         <div>
             <h3>Influences :</h3>
             <ol>
                 {{#each influences}}
-                <li>{{this}}</li>
+                <li class="ms-3">{{this}}</li>
                 {{/each}}
             </ol>
         </div>
@@ -61,7 +61,7 @@
             <h3>Influenced :</h3>
             <ol>
                 {{#each influenced}}
-                <li>{{this}}</li>
+                <li class="ms-3">{{this}}</li>
                 {{/each}}
             </ol>
         </div>
@@ -69,7 +69,7 @@
             <h3>Quotes :</h3>
             <ul>
                 {{#each quotes}}
-                <li><q>{{this}}</q></li>
+                <li class="ms-3"><q>{{this}}</q></li>
                 {{/each}}
             </ul>
         </div>

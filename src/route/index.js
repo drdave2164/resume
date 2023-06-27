@@ -114,8 +114,8 @@ router.get('/', function (req, res) {
         name: 'shopprofile',
       },
       {
-        link: 'http://localhost:3000/shopview',
-        name: 'shopview',
+        link: 'http://localhost:3000/shopreview',
+        name: 'shopreview',
       },
       {
         link: 'http://localhost:3000/skills',

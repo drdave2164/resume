@@ -3,21 +3,19 @@
    <div>
       <section>
          <div>
-            <h1>{{name}}</h1>
-            <div>
-               <b>{{age}}</b>, (<em>{{gender}}</em>)
+            <h1 class="mb-3">{{name}}</h1>
+            <div class="mb-2">
+               <b>{{age}}</b>, <em>({{gender}})</em>
             </div>
-            <br>
             {{#with address}}
             <address>{{street}},{{city}},{{state}},{{zip}},{{country}}</address>
             {{/with}}
-
+         </div>
       </section>
-      <br>
-      <hr>
+      <hr class="my-5">
       <section>
          <div>
-            <h2>- Education -</h2>
+            <h2 class="mb-3">- Education -</h2>
             {{#each education}}
             <p>{{degree}}</p>
             <p>{{major}}</p>
@@ -26,15 +24,13 @@
             {{/each}}
          </div>
       </section>
-      <br>
-      <hr>
+      <hr class="my-5">
       <section>
          <div>
-            <h2>- Work Experience -</h2>
+            <h2 class="mb-3">- Work Experience -</h2>
             {{#each workExperience}}
             <cite>{{company}}</cite>
             <p>{{title}}</p>
-
             <date>{{startDate}}</date> -
             <date>{{endDate}}</date>
             <ul>
@@ -44,9 +40,9 @@
             </ul>
             <date>{{year_founded}}</date>
             <p>{{industry}}</p>
-            <hr>
+            <hr class="my-5">
             <div>
-               <h3>- Employees -</h3>
+               <h3 class="mb-3">- Employees -</h3>
                {{#each employees}}
                <b>{{name}}</b> (<abbr>{{position}}</abbr>)
                <p>{{department}}</p>
@@ -56,44 +52,42 @@
                      <b>{{name}}</b>
                      <p>{{description}}</p>
                      <p>{{status}}</p>
-                     <hr>
-                     <div>
-                        <p><b>Teams :</b></p>
+                     <hr class="my-3">
+                     <div class="row">
+                        <p class="fw-semibold fs-4">Teams :</p>
                         {{#each teams}}
-                        <b>{{team_name}}</b>
-                        <br>
+                        <b class="mb-2">{{team_name}}</b>
                         {{#with team_leader}}
                         <p><b>{{name}}</b> ({{title}})</p>
                         <a href="{{email}}">{{email}}</a>
                         {{/with}}
-                        <br>
-                        <hr>
+                        <hr class="col-6 my-3">
                         <div>
                            {{#each team_members}}
                            <p><b>{{name}}</b> ({{title}})</p>
                            <a href="{{email}}">{{email}}</a>
-                           <hr>
-                           <p><b>Skills :</b></p>
-                           <ul>
+                           <hr class="col-6 my-3">
+                           <p class="fw-semibold fs-4">Skills :</p>
+                           <ul class="mb-3">
                               {{#each skills}}
-                              <li>{{this}}</li>
+                              <li class="ms-3">{{this}}</li>
                               {{/each}}
                            </ul>
                            <div>
-                              <p><b>Projects :</b></p>
+                              <p class="fw-semibold fs-4">Projects :</p>
                               {{#each projects}}
                               <p>{{name}}</p>
                               <p><em>{{description}}</em></p>
-                              <ul>
+                              <ul class="mb-3">
                                  {{#each technologies}}
-                                 <li>{{this}}</li>
+                                 <li class="ms-3">{{this}}</li>
                                  {{/each}}
                               </ul>
                               <div>
-                                 <p>Team members :</p>
+                                 <p class="fw-semibold fs-4">Team members :</p>
                                  <ul>
                                     {{#each team_members}}
-                                    <li><b>{{name}}</b> ({{title}})</li>
+                                    <li class="ms-3"><b>{{name}}</b> ({{title}})</li>
                                     {{/each}}
                                  </ul>
                               </div>
