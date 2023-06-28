@@ -62,84 +62,84 @@ router.get('/', function (req, res) {
     },
     buttons: [
       {
-        link: 'http://localhost:3000/bio',
+        link: '/bio',
         name: 'bio',
       },
       {
-        link: 'http://localhost:3000/car',
+        link: '/car',
         name: 'car',
       },
       {
-        link: 'http://localhost:3000/education',
+        link: '/education',
         name: 'education',
       },
       {
-        link: 'http://localhost:3000/facebook',
+        link: '/facebook',
         name: 'facebook',
       },
       {
-        link: 'http://localhost:3000/js',
+        link: '/js',
         name: 'js',
       },
       {
-        link: 'http://localhost:3000/mac',
+        link: '/mac',
         name: 'mac',
       },
       {
-        link: 'http://localhost:3000/person',
+        link: '/person',
         name: 'person',
       },
       {
-        link: 'http://localhost:3000/program',
+        link: '/program',
         name: 'program',
       },
       {
-        link: 'http://localhost:3000/shopcart',
+        link: '/shopcart',
         name: 'shopcart',
       },
       {
-        link: 'http://localhost:3000/shopcatalog',
+        link: '/shopcatalog',
         name: 'shopcatalog',
       },
       {
-        link: 'http://localhost:3000/shophome',
+        link: '/shophome',
         name: 'shophome',
       },
       {
-        link: 'http://localhost:3000/shoporder',
+        link: '/shoporder',
         name: 'shoporder',
       },
       {
-        link: 'http://localhost:3000/shopprofile',
+        link: '/shopprofile',
         name: 'shopprofile',
       },
       {
-        link: 'http://localhost:3000/shopreview',
+        link: '/shopreview',
         name: 'shopreview',
       },
       {
-        link: 'http://localhost:3000/skills',
+        link: '/skills',
         name: 'skills',
       },
       {
-        link: 'http://localhost:3000/summary',
+        link: '/summary',
         name: 'summary',
       },
       {
-        link: 'http://localhost:3000/task21',
+        link: '/task21',
         name: 'task21',
       },
       {
-        link: 'http://localhost:3000/task22',
+        link: '/task22',
         name: 'task22',
       },
       {
-        link: 'http://localhost:3000/task31',
+        link: '/task31',
         name: 'task31',
       },
-      { link: 'http://localhost:3000/web', name: 'web' },
+      { link: '/web', name: 'web' },
       {
-        link: 'http://localhost:3000/work',
+        link: '/work',
         name: 'work',
       },
     ],
